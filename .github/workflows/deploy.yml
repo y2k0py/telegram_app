@@ -21,10 +21,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'  # This will work once you have package-lock.json
+          # REMOVED: cache: 'npm' - this was causing the error
 
       - name: Install dependencies
-        run: npm ci  # This will work once you have package-lock.json
+        run: npm install
+        # CHANGED: from npm ci to npm install
 
       - name: Build
         run: npm run build
