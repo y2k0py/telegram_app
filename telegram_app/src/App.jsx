@@ -7,7 +7,7 @@ function App() {
         WebApp.ready();
 
         WebApp.expand();
-        WebApp.MainButton.show();
+        WebApp.MainButton.hide();
         WebApp.onEvent('mainButtonClicked', () => {
             WebApp.close();
             setText('closed')
@@ -20,5 +20,6 @@ function App() {
         </div>
     );
 }
+
 
 export default App
