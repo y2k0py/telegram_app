@@ -18,7 +18,7 @@ function App() {
 
     return (
         <div className="text-center">
-            test
+            <h1 className="text-2xl font-bold mb-4">Добро пожаловать в мое Telegram Web App!</h1>
         </div>
     );
 }
