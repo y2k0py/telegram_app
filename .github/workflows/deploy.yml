@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './your-app-directory-name/build'  # CHANGE THIS path
+          path: './telegram_app'  # CHANGE THIS path
 
       - name: Deploy to GitHub Pages
         id: deployment
