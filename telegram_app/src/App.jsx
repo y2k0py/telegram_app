@@ -1,24 +1,22 @@
 import WebApp from '@twa-dev/sdk'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
+    const [Text, setText] = useState()
     useEffect(() => {
-        // Инициализация Telegram Web App
         WebApp.ready();
 
-        // Настройка темы
         WebApp.expand();
         WebApp.MainButton.show();
-
-        // Обработка закрытия приложения
         WebApp.onEvent('mainButtonClicked', () => {
             WebApp.close();
+            setText('closed')
         });
     }, []);
 
     return (
         <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Добро пожаловать в мое Telegram Web App!</h1>
+            <h1 className="text-2xl font-bold mb-4">Добро пожаловать в мое Telegram Web App! {Text}</h1>
         </div>
     );
 }
